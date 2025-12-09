@@ -2,13 +2,11 @@ import { DOBString, DOBInfo } from "./types";
 import { MONTHS } from "./utils/monthMap";
 import { stripOrdinal } from "./utils/stripOrdinal";
 
-/**
- * Parses various date-of-birth formats into a structured DOBInfo object.
- */
+//* Parses various date-of-birth formats into a structured DOBInfo object.
 export function parseDOB(dob: DOBString): DOBInfo {
   let cleaned = stripOrdinal(dob.trim().toLowerCase());
 
-  // Replace common date separators with spaces
+  //* Replace common date separators with spaces
   cleaned = cleaned
     .replace(/[-\/.,]+/g, " ")
     .replace(/\s+/g, " ")
@@ -20,7 +18,7 @@ export function parseDOB(dob: DOBString): DOBInfo {
   let month: number | null = null;
   let year: number | null = null;
 
-  // Identify day, month, year in any supported order
+  //* Identify day, month, year in any supported order
   for (const part of parts) {
     if (/^\d{4}$/.test(part)) {
       year = Number(part);
@@ -38,7 +36,7 @@ export function parseDOB(dob: DOBString): DOBInfo {
     }
   }
 
-  // Handle numeric middle-part month: 01 09 2003
+  //* Handle numeric middle-part month: 01 09 2003
   if (!month && /^\d{1,2}$/.test(parts[1])) {
     const tryMonth = Number(parts[1]);
     if (tryMonth >= 1 && tryMonth <= 12) month = tryMonth;
@@ -53,14 +51,14 @@ export function parseDOB(dob: DOBString): DOBInfo {
     throw new Error(`Could not parse date: "${dob}"`);
   }
 
-  // Age calculation
+  //* Age calculation
   const today = new Date();
   const age =
     today.getFullYear() -
     date.getFullYear() -
     (today < new Date(today.getFullYear(), month - 1, day) ? 1 : 0);
 
-  // Leap year check
+  //* Leap year check
   const isLeapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 
   return {

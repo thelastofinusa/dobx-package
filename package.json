@@ -1,6 +1,6 @@
 {
   "name": "dobx",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A small, modern utility/tool for working with dates of birth",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -12,8 +12,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "prepare": "npm run build",
-    "publish": "npm version patch -m \"Release %s\""
+    "prepare": "npm run build"
   },
   "keywords": [
     "dob",
