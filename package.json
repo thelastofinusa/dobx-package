@@ -1,0 +1,47 @@
+{
+  "name": "dobx",
+  "version": "1.0.0",
+  "description": "A small, modern utility/tool for working with dates of birth",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "author": "thelastofinusa",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "dob",
+    "dobx",
+    "date",
+    "date-of-birth",
+    "birthdate",
+    "birthday",
+    "dob-parser",
+    "date-parser",
+    "birthdate-parser",
+    "parse-dob",
+    "age",
+    "age-calculator",
+    "date-utils",
+    "datetime",
+    "dob-utils"
+  ],
+  "homepage": "https://github.com/thelastofinusa/package-dobx#readme",
+  "bugs": {
+    "url": "https://github.com/thelastofinusa/package-dobx/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelastofinusa/package-dobx.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.15"
+  }
+}
