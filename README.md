@@ -97,6 +97,10 @@ Returns:
 | `isLeapYear` | boolean | Whether the provided year is a leap year |
 | `age`        | number  | Age calculated from today                |
 
+## Test Result
+
+<img src="./test-screenshot.png" alt="test screenshot" />
+
 ## License
 
 MIT © [thelastofinusa](https://linktr.ee/thelastofinusa)

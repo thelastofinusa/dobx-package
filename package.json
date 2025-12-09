@@ -1,6 +1,6 @@
 {
   "name": "dobx",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small, modern utility/tool for working with dates of birth",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -12,7 +12,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish": "npm version patch -m \"Release %s\""
   },
   "keywords": [
     "dob",
@@ -31,13 +32,13 @@
     "datetime",
     "dob-utils"
   ],
-  "homepage": "https://github.com/thelastofinusa/package-dobx#readme",
+  "homepage": "https://github.com/thelastofinusa/dobx-package#readme",
   "bugs": {
-    "url": "https://github.com/thelastofinusa/package-dobx/issues"
+    "url": "https://github.com/thelastofinusa/dobx-package/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thelastofinusa/package-dobx.git"
+    "url": "git+https://github.com/thelastofinusa/dobx-package.git"
   },
   "devDependencies": {
     "tsup": "^8.5.1",
