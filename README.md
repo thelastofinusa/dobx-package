@@ -103,4 +103,4 @@ Returns:
 
 ## License
 
-MIT © [thelastofinusa](https://linktr.ee/thelastofinusa)
+MIT © [thelastofinusa](https://github.com/thelastofinusa)
